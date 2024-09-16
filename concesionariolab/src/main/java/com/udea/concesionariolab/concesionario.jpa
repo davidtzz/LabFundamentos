@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" ptype="MONOLITH" ppkg="com.udea.concesionariolab" epkg="com.udea.concesionariolab.entity" v="4.8.4" rws="_17264858749012" Pws="_17264858749012" cws="_17264858749012" persistenceUnitName="com.udea_concesionariolab_war_1.0-SNAPSHOTPU" pp="E" sm="false" xs="false" id="_17264858749001" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity name="TipoVehiculo" lbl-ref="_17264859338104" compositePrimaryKeyClass="TipoVehiculoPK" abs="false" class="TipoVehiculo" v="true" xre="false" m="false" rootElement="_17264858749001" id="_17264859337463">
+        <jpa:ts e="true">
+            <jpa:a>_17264859338104</jpa:a>
+            <jpa:a>_17264860633969</jpa:a>
+            <jpa:a>_172648616123519</jpa:a>
+        </jpa:ts>
+        <jpa:hc e="true">
+            <jpa:a>_17264859338104</jpa:a>
+        </jpa:hc>
+        <jpa:eq e="true">
+            <jpa:a>_17264859338104</jpa:a>
+        </jpa:eq>
+        <jpa:con am="PUBLIC" e="true">
+            <jpa:a>_17264859338104</jpa:a>
+            <jpa:a>_17264860633969</jpa:a>
+            <jpa:a>_172648616123519</jpa:a>
+        </jpa:con>
+        <jpa:con am="PUBLIC" e="true"/>
+        <jpa:ath>David</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="tipo_vehiculo" ft="false" id="_17264860633969">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="tipo_vehiculo" unique="false" nullable="false" insertable="true" updatable="true" length="255"/>
+            </jpa:basic>
+            <jpa:one-to-many collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_17264859740686" connected-attribute-id="_172648616123218" v="true" name="vehiculoes" id="_172648616123519"/>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" ft="false" id="_17264859338104">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="id" unique="true" nullable="false" insertable="true" updatable="true"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="TipoVehiculo.findAll">
+            <jpa:query>Select e from TipoVehiculo e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TipoVehiculo.findByTipo_vehiculo">
+            <jpa:query>Select t from TipoVehiculo t where t.tipo_vehiculo=:tipo_vehiculo</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity name="Vehiculo" lbl-ref="_17264859740697" compositePrimaryKeyType="D" compositePrimaryKeyClass="VehiculoPK" abs="false" class="Vehiculo" v="true" xre="false" m="false" rootElement="_17264858749001" id="_17264859740686">
+        <jpa:ts e="true">
+            <jpa:a>_17264859740697</jpa:a>
+            <jpa:a>_172648608747710</jpa:a>
+            <jpa:a>_172648611287311</jpa:a>
+            <jpa:a>_172648611731812</jpa:a>
+            <jpa:a>_172648611855313</jpa:a>
+            <jpa:a>_172648611889514</jpa:a>
+            <jpa:a>_172648611952115</jpa:a>
+            <jpa:a>_172648612000916</jpa:a>
+            <jpa:a>_172648616123218</jpa:a>
+        </jpa:ts>
+        <jpa:hc e="true">
+            <jpa:a>_17264859740697</jpa:a>
+        </jpa:hc>
+        <jpa:eq e="true">
+            <jpa:a>_17264859740697</jpa:a>
+        </jpa:eq>
+        <jpa:con am="PUBLIC" e="true">
+            <jpa:a>_17264859740697</jpa:a>
+            <jpa:a>_172648608747710</jpa:a>
+            <jpa:a>_172648611287311</jpa:a>
+            <jpa:a>_172648611731812</jpa:a>
+            <jpa:a>_172648611855313</jpa:a>
+            <jpa:a>_172648611889514</jpa:a>
+            <jpa:a>_172648611952115</jpa:a>
+            <jpa:a>_172648612000916</jpa:a>
+            <jpa:a>_172648616123218</jpa:a>
+        </jpa:con>
+        <jpa:con am="PUBLIC" e="true"/>
+        <jpa:ath>David</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="nombre" ft="false" id="_172648608747710">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="nombre" unique="false" nullable="false" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="modelo" ft="false" id="_172648611287311">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="modelo" unique="false" nullable="false" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="marca" ft="false" id="_172648611731812">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="marca" unique="false" nullable="false" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="byte[]" v="true" xvt="" name="foto" ft="false" id="_172648611855313">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="foto" unique="false" nullable="false" insertable="true" updatable="true"/>
+                <jpa:lob/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Date" v="true" xvt="" name="fecha_ingreso" ft="false" id="_172648611889514">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:bv>
+                    <jpa:pp m="Revise la fecha ingresada"/>
+                </jpa:bv>
+                <jpa:temporal>DATE</jpa:temporal>
+                <jpa:column name="fecha_ingreso" unique="false" nullable="false" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="double" v="true" xvt="" name="precio" ft="false" id="_172648611952115">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:bv>
+                    <jpa:pz m="Debe ingresar un precio válido"/>
+                </jpa:bv>
+                <jpa:column name="precio" unique="false" nullable="false" insertable="true" updatable="true" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="cantidad_disponible" ft="false" id="_172648612000916">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:bv>
+                    <jpa:pz m="Debe ingresar valores positivos"/>
+                </jpa:bv>
+                <jpa:column name="cantidad_disponible" unique="false" nullable="false" insertable="true" updatable="true" precision="0"/>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="true" connected-entity-id="_17264859337463" connected-attribute-id="_172648616123519" v="true" name="tipoVehiculo" id="_172648616123218"/>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" ft="false" id="_17264859740697">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="id" unique="true" nullable="false" insertable="true" updatable="true"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Vehiculo.findAll">
+            <jpa:query>Select e from Vehiculo e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vehiculo.findByNombre">
+            <jpa:query>Select v from Vehiculo v where v.nombre=:nombre</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vehiculo.findByModelo">
+            <jpa:query>Select v from Vehiculo v where v.modelo=:modelo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vehiculo.findByMarca">
+            <jpa:query>Select v from Vehiculo v where v.marca=:marca</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vehiculo.findByFoto">
+            <jpa:query>Select v from Vehiculo v where v.foto=:foto</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vehiculo.findByFecha_ingreso">
+            <jpa:query>Select v from Vehiculo v where v.fecha_ingreso=:fecha_ingreso</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vehiculo.findByPrecio">
+            <jpa:query>Select v from Vehiculo v where v.precio=:precio</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Vehiculo.findByCantidad_disponible">
+            <jpa:query>Select v from Vehiculo v where v.cantidad_disponible=:cantidad_disponible</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_17264858749012">
+            <i ref="_17264859337463" x="244" y="191"/>
+            <i ref="_17264859740686" x="591" y="191"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>

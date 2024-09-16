@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateTipoVehiculoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateTipoVehiculoLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{tipoVehiculoController.selected.id}" title="#{bundle.CreateTipoVehiculoTitle_id}" required="true" requiredMessage="#{bundle.CreateTipoVehiculoRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateTipoVehiculoLabel_tipo_vehiculo}" for="tipo_vehiculo" />
+                    <h:inputText id="tipo_vehiculo" value="#{tipoVehiculoController.selected.tipo_vehiculo}" title="#{bundle.CreateTipoVehiculoTitle_tipo_vehiculo}" required="true" requiredMessage="#{bundle.CreateTipoVehiculoRequiredMessage_tipo_vehiculo}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{tipoVehiculoController.create}" value="#{bundle.CreateTipoVehiculoSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{tipoVehiculoController.prepareList}" value="#{bundle.CreateTipoVehiculoShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateTipoVehiculoIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

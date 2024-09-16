@@ -1,0 +1,16 @@
+com\udea\concesionariolab\controller\TipoVehiculoController.class
+com\udea\concesionariolab\ejb\AbstractFacade.class
+com\udea\concesionariolab\controller\TipoVehiculoController$TipoVehiculoControllerConverter.class
+com\udea\concesionariolab\ejb\VehiculoFacade.class
+com\udea\concesionariolab\com\udea\concesionariolab\entity\Vehiculo_.class
+com\udea\concesionariolab\controller\util\JsfUtil.class
+com\udea\concesionariolab\controller\VehiculoController$VehiculoControllerConverter.class
+com\udea\concesionariolab\controller\util\PaginationHelper.class
+com\udea\concesionariolab\ejb\TipoVehiculoFacade.class
+com\udea\concesionariolab\controller\VehiculoController$1.class
+com\udea\concesionariolab\controller\VehiculoController.class
+com\udea\concesionariolab\com\udea\concesionariolab\entity\TipoVehiculo_.class
+com\udea\concesionariolab\com\udea\concesionariolab\entity\Vehiculo.class
+com\udea\concesionariolab\controller\TipoVehiculoController$1.class
+com\udea\concesionariolab\com\udea\concesionariolab\entity\VehiculoPK.class
+com\udea\concesionariolab\com\udea\concesionariolab\entity\TipoVehiculo.class
